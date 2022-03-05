@@ -1,0 +1,19 @@
+{
+  "name": "data_structures_algorithms_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@datastructures-js/priority-queue": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "vitest": "^3.0.5"
+  }
+}
