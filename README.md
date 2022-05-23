@@ -83,7 +83,7 @@ Accessing memory is O(1) constant time. If we had to access a number in a 32 bit
 
 ## Simplify Big O
 
-We focus on how the runtime grows towards infinty. We drop the constants and coefficients. In Big O notation, you only kepp the term that grows the fastest as the input size increases. This term is known as the dominant term.
+We focus on how the runtime grows towards infinty. We drop the constants and coefficients. In Big O notation, you only keep the term that grows the fastest as the input size increases. This term is known as the dominant term.
 
 When we have more complex big O expressions, we drop the less significant terms. Because as N grows towards infinity, the less significant terms become insignificant.
 
