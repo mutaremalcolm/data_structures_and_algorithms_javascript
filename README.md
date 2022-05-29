@@ -87,7 +87,7 @@ We focus on how the runtime grows towards infinty. We drop the constants and coe
 
 When we have more complex big O expressions, we drop the less significant terms. Because as N grows towards infinity, the less significant terms become insignificant.
 
-if you've different inputs, you can use different variables to represent them. For example, if you have two arrays of different sizes, you can use N and M to represent their sizes. But do not frop any of the variables.
+if you've different inputs, you can use different variables to represent them. For example, if you have two arrays of different sizes, you can use N and M to represent their sizes. But do not drop any of the variables.
 
 **Drop Lower Order Terms:** In O(n^2 + n), the n term is much smaller than n^2 for large n, so it's dropped, simplifying to O(n^2).
 
