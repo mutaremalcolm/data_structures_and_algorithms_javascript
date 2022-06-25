@@ -53,3 +53,28 @@ export function reverseLinkedList(list) {
     list.head = prevNode
 }
 ```
+
+I got this pretty quickly, except I started off with `let prevNode = list.head` and `let currentNode = list.head.next`. This is wrong because you want to start off with `prevNode` as `null` and `currentNode` as `list.head`. Otherwise, you will end up with a cycle. You end up with a cycle because you are setting `currentNode.next` to  `prevNode`, but `prevNode is not null`, it's `list.head`, so you end up with a cycle.
+
+To visualize how messed up it gets:
+
+```js
+export function reversedLinkedList(list) {
+    // Incorrect initialisation
+    let prevNode = list.head // Let's say list.head is Node A
+    let currentNode = list.head.next //Let's ay list.head.next is Node B
+
+    while (currentNode) {
+        const nextNode = currentNode.next //Assume currentNode is Node B initially
+        currentNode.next = prevNode // Set Node B's head next to Node A (cycle formed here)
+
+        // Move forward in the list
+        prevNode = currentNode //prevNode becomes B
+        currentNode = nextNode // currentNode moves to the next node in the original list
+    }
+
+    //After the first iteration:
+    //Node A and Node B point to each other, forming a cycle.
+    list.head = prevNode
+}
+```
