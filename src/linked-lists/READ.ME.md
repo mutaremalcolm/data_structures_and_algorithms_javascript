@@ -78,3 +78,50 @@ export function reversedLinkedList(list) {
     list.head = prevNode
 }
 ```
+# Merge Two Sorted Linked Lists
+
+Merging two sorted linked lists is done by creating a new list. This is the key. If you have a the new list, you simply iterate through the two lists and add the smaller node to the new list. You keep doing this until you reach the end of one of the lists. Then you add the rest of the other list to the new one. Which is fine because we are assuming they are sorted.
+
+```js
+export function mergeSortedList(list1, list2) {
+    let mergedList = new SinglyLinkedList()
+
+    let firstHead = list.head
+    let seconfHead = list2.head
+
+    if (!firstHead) return list2
+    if (!secondHead) return list1
+
+    //One of the lists will reach the end first
+    while (firstHead !== null && secondHead !== null) {
+        //Simply add the smaller node to the new list
+        //Then move forward in the list
+        //Then proceed to the next iteration
+        if (firstHead.value < secondHead.value) {
+            mergedList.append(firstHead.value) {
+                firstHead = firstHead.next
+            }else {
+                mergedList.append(secondHead.value)
+                secondHead = secondHead.next
+            }
+        }
+
+        //Either this list or the other list has reached the end
+        //Both are null
+        while (firstHead !== null) {
+            mergedList.append(firstHead.value)
+            firstHead = firstHead.next
+        }
+
+        //If this happens, it means the first list has reached the end
+        while (secondHead !== null) {
+            mergedList.append(firstHead.value)
+            secondHead = secondHead.next
+        }
+
+        return mergedList
+    }
+```
+This form of looping is interesting where you check if a value in `while` loop is not `null` and you proceed iterating till it is.
+
+What's interesting is, you see a similar `while` loop done for breadth-first search where you continue till queue is not empty, but keep popping off and filling in the queue with the unvisited neighbors.
