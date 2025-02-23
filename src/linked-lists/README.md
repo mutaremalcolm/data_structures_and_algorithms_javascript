@@ -128,4 +128,4 @@ export function mergeSortedLists (list1, list2) {
 
 This form of looping is interesting where you check if a value in `while` loop is not `null` and you proceed iterating till it is. 
 
-What's interesting, you see a similar `while` loop done for breadth-first search where you continue till queue is not empty, but keep popping off and filling in the queue is not empty, but keep popping off and filling in the queue with the unvisited neighbors.
+What's interesting, you see a similar `while` loop done for breadth-first search where you continue till queue is not empty, but keep popping off and filling in the queue is not empty, but keep popping off and filling in the queue with the unvisited neighbors.`
