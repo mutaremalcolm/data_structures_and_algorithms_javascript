@@ -15,3 +15,4 @@ class PrefixSum {
         return preRight - preLeft
     }
 }
+  
