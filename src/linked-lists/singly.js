@@ -130,7 +130,7 @@ export class SinglyLinkedList {
         const removed = this.head
         this.head = this.head.next
         this.length--
-
+``
         return removed 
     }
 
