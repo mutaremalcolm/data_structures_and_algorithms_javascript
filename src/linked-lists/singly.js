@@ -54,14 +54,27 @@ export class SinglyLinkedList {
         let currentNode = this.head
 
         while (currentNode !== null) {
-            if (currentNode.value === value) {
-                return currentNode
+            array.push(currentNode.value)
+            currentNode = currentNode.next
             }
 
-            currentNode = currentNode.next
+            return array
         }
 
-        return null
+        find(value) {
+            if (this.head === null) return null
+
+            let currentNode = this.head
+
+            while (currentNode !== null) {
+                if (currentNode.value === value) {
+                    return currentNode
+                }
+
+                currentNode = currentNode.next
+            }
+
+            return null
     }
 
     insert(index, value) {
@@ -148,8 +161,8 @@ export class SinglyLinkedList {
             tail = tail.next
         }
 
-        nodeBeforeTail.next = nullt
-        his.tail = nodeBeforeTail
+        nodeBeforeTail.next = null
+        this.tail = nodeBeforeTail
         this.length--
 
         return tail
