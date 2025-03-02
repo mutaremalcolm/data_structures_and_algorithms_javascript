@@ -129,11 +129,16 @@ export class SinglyLinkedList {
     removeFirst() {
         if (this.head === null) return null
 
-        const removed = this.head
+        const removedNode = this.head
         this.head = this.head.next
+        if (this.head) {
+            this.head.prev = null;
+        }else {
+            this.tail = null
+        }
         this.length--
 
-        return removed
+        return removedNode
     }
 
     removeFirst() {

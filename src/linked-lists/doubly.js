@@ -50,8 +50,33 @@ export class DoublyLinkedList {
             this.head = null
             this.tail = null
             this.length--
-            
-            
+            return removed
+        } else {
+            const removed = this.tail
+            this.tail.prev.next = null
+            this.tail = this.tail.prev
+            this.length--
+
+            return removed
+
+        }
+    }
+
+    removeFirst() {
+        if (this.head === null) {
+            return null
+        } else if (this.head.value === this.tail.value) {
+            const removed = this.tail
+            this.head = null
+            this.tail = null
+            this.length--
+            return removed
+        } else {
+            const removed = this.head
+            this.tail.prev.next = null
+            this.tail = this.head.prev
+            this.length--
+
             return removed
         }
     }
