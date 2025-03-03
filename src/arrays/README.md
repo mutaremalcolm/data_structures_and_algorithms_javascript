@@ -12,7 +12,7 @@ So, for example in a 64 bit system, if you have an array of 4 numbers, it will t
 
 Arrays in languages like Javascript are dynamic. They tend to fool you into thinking they are more efficient than they are.
 
-For example, if you have an array of 4 numbers, it will take 32 bytes of memory. But if ypou add a 5th number, it will create a new array pf 8 numbers and copy the first 4 numbers into it. Then, it will add the 5th number. So, it will take 64 bytes of memory.
+For example, if you have an array of 4 numbers, it will take 32 bytes of memory. But if you add a 5th number, it will create a new array pf 8 numbers and copy the first 4 numbers into it. Then, it will add the 5th number. So, it will take 64 bytes of memory.
 
 How dynamic arrays work: They create a new array with double the size of the old array. Then, they copy the old array into the new array. Then, they add the new item.
 

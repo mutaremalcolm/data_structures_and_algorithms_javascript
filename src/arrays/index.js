@@ -7,7 +7,7 @@ arrWithNumbers.shift() // [2, 3, 4, 6]
 arrWithNumbers.unshift(1) // [1, 2, 3, 4, 6]
 
 // 2d Array in JS 
-// First index in the row 
+// First index is the row 
 // Second index is the column
 const arrWithRowsAndColumns = [
     [1, 2, 3],

@@ -76,7 +76,7 @@ As N grows towards infinity, how does the runtime of the algorithm grow?
 
 ## What is N?
 
-Abstarct concept of input size. It is the number of elements in the input.
+Abstract concept of input size. It is the number of elements in the input.
 
 ## Accessing in memory 
 
@@ -88,7 +88,7 @@ We focus on how the runtime grows towards infinty. We drop the constants and coe
 
 When we have more complex big O expressions, we drop the less significant terms. Because as N grows towards infinity, the less significant terms become insignificant.
 
-if you've different inputs, you can use different variables to represent them. For example, if you have two arrays of different sizes, you can use N and M to represent their sizes. But do not frop any of the variables.
+if you've different inputs, you can use different variables to represent them. For example, if you have two arrays of different sizes, you can use N and M to represent their sizes. But do not drop any of the variables.
 
 **Drop Lower Order Terms:** In O(n^2 + n), the n term is much smaller than n^2 for large n, so it's dropped, simplifying to O(n^2).
 
@@ -135,13 +135,13 @@ Usually algorithms that involve dividing problems in half have logarithmic time 
 
 Let's say we have [1, 2, 3]. The program has to store this in memory. Imagine we have a 64 bit computer. Each number is 8 bytes of memory to store this array. The computer needs to find 24 bytes of free memory to store this array.
 
-For recap: A byte consists pf 8 bits. A bit is the smallest unit of memory. A byte is the smallest addressable unit of memory.
+For recap: A byte consists of 8 bits. A bit is the smallest unit of memory. A byte is the smallest addressable unit of memory.
 
 We have two types of arrays: static and dynamic.
 
 ## Static Arrays
 
-Static arrays have fixed size. You have to specify the size of the array when you declare it. You can't add or remove elements froma a static array. You can only update existing elements.
+Static arrays have fixed size. You have to specify the size of the array when you declare it. You can't add or remove elements from a static array. You can only update existing elements.
 
 ### Big O Notation 
 
@@ -163,7 +163,7 @@ Travessing an array is O(n) linear time. This is because the computer has to tra
 
 ### Copy 
 
-Copying an array is O(n) linear time. The computer first has to traverse each element in the array.  Then it has to copy each element to the new array. In memory, the computer has to find a new block of memeory too store the new array.
+Copying an array is O(n) linear time. The computer first has to traverse each element in the array.  Then it has to copy each element to the new array. In memory, the computer has to find a new block of memory to store the new array.
 
 People will do this mistake during coding interviews by thinking that copying an array is O(1) constant time. this is because they think that the computer can just copy the memory address of the array. But this is not true. The computer has to copy each element to the new array. In memory, the computer has to find a new block of memory to store the new array. You just don't copy.
 
