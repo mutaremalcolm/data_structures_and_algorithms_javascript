@@ -73,8 +73,8 @@ export class DoublyLinkedList {
             return removed
         } else {
             const removed = this.head
-            this.tail.prev.next = null
-            this.tail = this.head.prev
+            this.head.next.prev = null
+            this.head = this.head.next
             this.length--
 
             return removed
