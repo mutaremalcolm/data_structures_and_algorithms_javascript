@@ -19,7 +19,7 @@ export class CircularLinkedList {
     append(value) {
         const newNode = new Node(value)
 
-        if (thishead === null) {
+        if (this.head === null) {
             this.head = newNode
             this.tail = newNode
             this.tail.next = this.head
