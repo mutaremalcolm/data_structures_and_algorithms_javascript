@@ -10,7 +10,7 @@ it('should enqueue, peek, dequeue, size, isEmpty', () => {
 
     expect(queue.peek()).toBe(1)
     expect(queue.dequeue()).toBe(1)
-    expect(queue.enqueue()).toBe(2)
+    expect(queue.dequeue()).toBe(2)
     expect(queue.dequeue()).toBe(3)
     expect(queue.dequeue()).toBeUndefined()
 
