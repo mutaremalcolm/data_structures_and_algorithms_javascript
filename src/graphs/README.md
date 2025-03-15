@@ -10,19 +10,19 @@ Three common ones:
 
 Graphs consists of vertices and edges.
 
-Verices are simply nodes. They are the values.
+Vertices are simply nodes. They are the values.
 
 Edges are the connections between the nodes.
 
-To visualize, imagine roads connecting cities. The cities are the verices and the roads are the edges.
+To visualize, imagine roads connecting cities. The cities are the vertices and the roads are the edges.
 
-Or friends aon Facebook. The firends are the vertices and the connections are the edges.
+Or friends on Facebook. The friends are the vertices and the connections are the edges.
 
 # Different representations of Graphs
 
 You can represent graphs in two ways;
 
-- Adjacency Matrix: 2D array of cerices. First vertex will be the first row. In it, each column represnts the edges. If there is an edge, it will be in the linked list. If not, it will be null.
+- Adjacency Matrix: 2D array of vertices. First vertex will be the first row. In it, each column represnts the edges. If there is an edge, it will be in the linked list. If not, it will be null.
 
 # Graph Traversal
 
@@ -53,7 +53,6 @@ Big O: O(V + E) -> Because input is a graph, we have to visit every vertex and e
     // Each vertex has a linked list of edges.
     // We loop and call dfs on each edge.
     edges.forEach((edge) => {
-
         if (!visited.has(edge)) {
             // If the edge has not been visited, we call dfs on it.
             this.dfs(edge, visited, result)
@@ -179,7 +178,7 @@ This algorithm is used to find the shortest path between two vertices in a weigh
 
 In this implementation, I'm using an array for the unvisited nodes. But it's better to use a priority queue. I will implement that later. That would make the algorithm faster. From O(V + E) to O(E log V). Because we are using a priority queue, we don't have to loop over all the nodes to find the node with the smallest distance. We can just dequeue the node with the smallest distance.
 
-To understand thsi algorithm, you have to understand the two paths it contains:
+To understand this algorithm, you have to understand the two paths it contains:
 
 1. Finding the shortest distance between two nodes.
 2. Finding the shortest path between two nodes.
@@ -188,7 +187,7 @@ The distance between two nodes is the sum of the weights of the edges between th
 
 The shortest path is the full path, all nodes from end to start.
 
-For example, I can tell you, the shortest distance to drive to Pretoria from Johannesburg is 54 KMs. But that doesnt tell you how to get there. You need the full path, which is the shortest path.
+For example, I can tell you, the shortest distance to drive to Pretoria from Johannesburg is 54 KMs. But that doesn't tell you how to get there. You need the full path, which is the shortest path.
 
 This means we need to keep track of two things:
 
@@ -219,7 +218,7 @@ Now, this is where it gets a bit confusing.
 
 The first thing you have to understand is that each node has neighbors. However, other nodes can also have the same neighbors. That's why distances and previous nodes may already have a value for the neighbor.
 
-It confused me here because my initial mental model was distances and previous nodes for each neighbor are either empty or filled. But that's not the case. They may alreadyt have a value.
+It confused me here because my initial mental model was distances and previous nodes for each neighbor are either empty or filled. But that's not the case. They may already have a value.
 
 ```js
 distances[edge.value] = distanceToNeighbor
@@ -255,7 +254,7 @@ Here we're reconstructing the path. We start with the `end` node (we get this fr
 
 ## Greedy algorithm
 
-This algorithm is a greedy algorithm. It makes the best decision at each step. It doesn't look ahead. It doesn't look at he big picture. For example, we are looking for the shortest path between two nodes.
+This algorithm is a greedy algorithm. It makes the best decision at each step. It doesn't look ahead. It doesn't look at the big picture. For example, we are looking for the shortest path between two nodes.
 
 At each step, we chosose the node with the smallest distance. We don't look ahead to see if there is a better path. We just choose the node with the smallest distance at each step.
 
