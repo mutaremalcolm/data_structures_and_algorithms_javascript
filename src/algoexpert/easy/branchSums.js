@@ -6,7 +6,7 @@ export function branchSums(root, sumOfBranch = 0, sums = []) {
         sums.push(sumOfBranch)
     }
 
-    if (root.eft) {
+    if (root.left) {
         branchSums(root.left, sumOfBranch, sums)
     }
 
