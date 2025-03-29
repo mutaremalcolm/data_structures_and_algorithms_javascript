@@ -121,11 +121,11 @@ The steps are:
 
 ## Analogy
 
-Imagine you're tasked with organizing a large libray. Doing it all at once seems overwhelming. So, uou apply a divide and conquer approach:
+Imagine you're tasked with organizing a large libray. Doing it all at once seems overwhelming. So, you apply a divide and conquer approach:
 
 **Divide:** You divide the entire library into sections (fiction, non-fiction, science, literature, etc).
 
-**Conquer:** Each section is then organized independetly. This task is simpler because each section is smaller and more manageable than the whole library.
+**Conquer:** Each section is then organized independtly. This task is simpler because each section is smaller and more manageable than the whole library.
 
 **Combine:** Once all sections are organized, the entire library is organized as a result of organizing these individual sections.
 
