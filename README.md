@@ -29,7 +29,7 @@ These are called time complexity and space complexity.
 
 # Memory 
 
-Memory can be visualised as a canvas. memory canvas is bounded. We have a finite amount of memory. Your program will store your variables in memory slots or a row of memory slots for related data e.g arrays.
+Memory can be visualised as a canvas. Memory canvas is bounded. We have a finite amount of memory. Your program will store your variables in memory slots or a row of memory slots for related data e.g arrays.
 
 In a computer, memory is organised as a large number of bytes. Each byte is used to store value and has a unique address. The computer can perform read or write operations to these addresses.
 
